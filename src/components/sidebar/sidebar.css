@@ -75,7 +75,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 260px;
+    margin-top: 25px;
 }
 
 .account__content {
@@ -91,4 +91,8 @@
 .account__subtitle {
     font-weight: 400;
     opacity: 0.6;
+}
+
+.account__btn {
+    background-color: transparent;
 }

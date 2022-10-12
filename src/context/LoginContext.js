@@ -4,7 +4,7 @@ export const LoginCreatContext = createContext()
 
 function LoginContext({children}) {
 
-    const [isLogin, setLogin] = useState(localStorage.getItem("login"))
+    const [isLogin, setLogin] = useState(false)
     return (
         <LoginCreatContext.Provider value={{isLogin, setLogin}}>
             {children}

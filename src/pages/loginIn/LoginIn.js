@@ -10,7 +10,6 @@ function LoginIn() {
         e.preventDefault()
         
         setLogin(true)
-        localStorage.setItem("login", true)
     }
 
     return (
