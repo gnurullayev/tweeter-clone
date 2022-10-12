@@ -21,10 +21,10 @@ body {
 }
 
 .container {
-  width: 1005;
-  max-width: 1634px;
+  width: 100%;
+  max-width: 1232px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 16px;
 }
 
 .btn {

@@ -1,6 +1,6 @@
 .aside {
-    width: 400px;
-    height: 800px;
+    width: 100%;
+    max-width: 350px;
     padding-left: 28px;
     padding-top: 20px;
     padding-bottom: 40px;
@@ -49,7 +49,8 @@
     background-color: transparent;
 }
 
-.trends__header-text {
+.trends__header-text,
+.likes__header-text {
     font-weight: 700;
     font-size: 24px;
     line-height: 32px;
@@ -92,7 +93,66 @@
     margin-top: 30px;
 }
 
-.trends__footer-btn {
+.trends__footer-btn,
+.likes__footer-btn {
     line-height: 100%;
     color: #1DA1F2;
+}
+
+.aside__likes {
+    width: 100%;
+    margin-top: 15px;
+    padding: 0 15px;
+    padding-top: 20px;
+    padding-bottom: 25px;
+    background: #F7F9F9;
+    border-radius: 10px;
+}
+
+.likes__body {
+    margin-top: 25px;
+}
+
+.likes__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    color: #000000;
+}
+
+.likes__img {
+    display: block;
+    width: 60px;
+    height: 60px;
+}
+
+.likes__title {
+    font-weight: 600;
+}
+
+.likes__subtitle {
+    opacity: 0.6;
+}
+
+.likes__btn {
+    padding: 10px 18px;
+    font-weight: 700;
+    color: #FFFFFF;
+    text-align: center;
+    background: #000000;
+    border-radius: 50px;
+}
+
+.aside__end {
+    margin-top: 30px;
+}
+
+.aside__end-link {
+    display: inline-block;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 21px;
+    color: #536471;
 }
