@@ -1,0 +1,94 @@
+.sidebar {
+    width: 268px;
+    padding: 0px 17px;
+    padding-top: 115px;
+    padding-bottom: 40px;
+    background-image: url("../../assets/sidebar-bg.png");
+    background-repeat: no-repeat;
+    background-position:17px 25px;
+    border-right: 1px solid #C4C4C4;
+}
+
+.sidebar__item {
+    padding-left: 55px;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.sidebar__item::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:25px;
+    height: 25px;
+    background-repeat: no-repeat;
+    content: "";
+}
+
+.sidebar__item:first-child:before {
+    background-image: url("../../assets/Vector.svg");
+}
+.sidebar__item:nth-child(2):before {
+    background-image: url("../../assets/explore.svg");
+}
+
+.sidebar__item:nth-child(3):before {
+    background-image: url("../../assets/notification.svg");
+}
+
+.sidebar__item:nth-child(4):before {
+    background-image: url("../../assets/message.svg");
+}
+
+.sidebar__item:nth-child(5):before {
+    background-image: url("../../assets/bookmark.svg");
+}
+
+.sidebar__item:nth-child(6):before {
+    background-image: url("../../assets/list.svg");
+    background-position: 50%;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+.sidebar__item:nth-child(7):before {
+    background-image: url("../../assets/profile.svg");
+}
+
+.sidebar__item:nth-child(8):before {
+    background-image: url("../../assets/more.svg");
+}
+
+.sidebar__link {
+    font-weight: 700;
+    color: #000000;
+}
+
+.sitebar__btn {
+    width: 230px;
+    height: 55px;
+}
+
+.sidebar__account {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 260px;
+}
+
+.account__content {
+    font-size: 16px;
+    line-height: 21px;
+    color: #000000;
+}
+
+.account__title {
+    font-weight: 600;
+}
+
+.account__subtitle {
+    font-weight: 400;
+    opacity: 0.6;
+}

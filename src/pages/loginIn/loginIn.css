@@ -1,0 +1,53 @@
+.login-in {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.login-in__content {
+    width: 100%;
+    max-width: 450px;
+    height: 476px;
+    background-image: url("../../assets/twitter-logo-4 1.png");
+    background-repeat: no-repeat;
+}
+
+.login-in__title {
+    margin-top: 77px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 42px;
+    line-height: 49px;
+    color: #000000;
+}
+
+.form {
+    margin-top: 36px;
+}
+
+.form__control {
+    display: block;
+    width: 100%;
+    max-width: 450px;
+    height: 70px;
+    margin-bottom: 25px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+}
+
+.login-in__footer {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form__link {
+    color: #1DA1F2;
+
+}
