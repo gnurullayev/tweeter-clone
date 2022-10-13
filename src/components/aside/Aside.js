@@ -8,12 +8,13 @@ import avatar2 from "../../assets/avater2.png"
 function Aside() {
     return (
         <aside className='aside'>
-            <div className="aside__content">
+            <div className="aside__header">
                 <label className='aside__search search'>
                     <img className='search__img' src= {search} alt="search" />
                     <input className='search__text' type="text" placeholder='Search Twitter'/>
                 </label>
-
+            </div>
+            <div className="aside__content">
                 <div className="aside__trends trends">
                     <div className="trends__header">
                         <p className='trends__header-text'>Trends for you</p>
