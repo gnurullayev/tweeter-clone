@@ -14,9 +14,9 @@ function Home() {
     return (
         <div className='home'>
             <div className='home__header header'>
-                <div className="header__content content">
-                    <h3 className='content__title'>Home</h3>
-                    <button className='content__btn card__btn'>
+                <div className="header__content">
+                    <h3 className='header__conten-title'>Home</h3>
+                    <button className='header__content-btn card__btn'>
                         <img src= {ContentImg} alt=""/>
                     </button>
                 </div>

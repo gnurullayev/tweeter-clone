@@ -1,9 +1,9 @@
 .header {
-    position: fixed;
+    position: sticky;
+    top: 0;
     z-index: 10;
     height: 70px;
-    width: 100%;
-    max-width: 600px;
+    width: 600px;
     background-color: #E5E5E5;
     border-bottom: 1px solid #D8D8D8;
 }
@@ -16,18 +16,18 @@
     padding: 0 20px;
 }
 
-.content__title {
+.header__content-title {
     font-size: 24px;
     line-height: 32px;
     color: #000000;
 }
 
-.content__btn {
+.header__content-btn {
     background-color: transparent;
 }
 
 .home__body {
-    padding-top: 70px;
+    padding-top: 10px;
 }
 
 
@@ -41,7 +41,7 @@
 .home__profile-content {
     margin-top: 10px;
     width: 100%;
-    max-width: 500px;
+    width: 500px;
     padding-left: 15px;
 }
 
@@ -53,9 +53,9 @@
 
 .home__prfile-start {
     display: block;
-    font-weight: 600;
-    font-size: 22px;
-    line-height: 29px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
     color: #828282;
     background-color: transparent;
 }
@@ -83,7 +83,7 @@
 }
 
 .emoge-list__item + .emoge-list__item {
-    margin-left: 20px;
+    margin-left: 0px;
 }
 
 .emoge-list__item:hover{
@@ -92,10 +92,10 @@
 
 
 .home__profile-textSubmit {
-    width: 120px;
-    height: 45px;
+    width: 100px;
+    height: 42px;
     padding: 0;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 17px;
     line-height: 100%;
     background: #1DA1F2;
@@ -103,6 +103,63 @@
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
 }
 
-.card-desc {
-    color: #000000;
+
+
+@media (max-width: 1230px) { 
+    .header {
+        width: 600px;
+    }
+
+    .home__profile-content {
+        margin-top: 10px;
+        width: 747px;
+        padding-left: 15px;
+    }
 }
+
+@media (max-width: 1060px) { 
+    .home {
+        border-right: 1px solid #C4C4C4;
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .header {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .home__profile-content {
+        margin-top: 10px;
+        width: 100%;
+        max-width: 600px;
+        padding-left: 15px;
+
+    }
+
+    .header__content {
+        width: 100%;
+        max-width:600px;
+    }
+}
+
+@media only screen and (max-width: 532px) {
+    .emoge-list__item:last-child {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .home__profile {
+        display: none;
+    }
+
+    .home {
+        border-right: 0;
+        width: 100%;
+        max-width: 600px;
+    }
+}
+
+
+

@@ -35,7 +35,7 @@
 }
 
 .sidebar__link-img{
-    display: inline-block;
+    display: block;
     width: 25px;
     height: 25px;
     margin-right: 25px;
@@ -47,7 +47,8 @@
 }
 
 .sitebar__btn {
-    width: 210px;
+    width: 100%;
+    max-width: 210px;
     height: 50px;
     transition: all .4s linear;
 }
@@ -88,5 +89,77 @@
 }
 
 .account__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: all .4s linear;
     background-color: transparent;
+    cursor: pointer;
+}
+
+.account__btn:hover  {
+    background-color: rgba(130, 219, 247, 0.3);
+}
+
+
+@media (max-width: 1230px) {
+    .sidebar {
+        width: 100%;
+        max-width: 76px;
+        border-right: 1px solid #C4C4C4;
+    }
+
+    .sidebar__item {
+        width: 76px;
+        height: max-content;
+        max-width: 76px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 14px;
+        border-radius: 50px;
+        transition: all .4s linear;
+    }
+     
+
+    .sidebar__link-span,
+    .account__content,
+    .account__btn {
+        display: none;
+    }
+    
+    .sidebar__link-img {
+        width: 26px;
+        height: 26px;
+        margin: 0;
+    }
+    
+    .sitebar__btn {
+        display: block;
+        width: 50px;
+        height: 50px;
+        margin: 0 auto;
+        border-radius: 50%;
+    }
+    .sitebar__btn-text {
+        display: none;
+    }
+
+    .sidebar__account {
+        display: block;
+        max-width: 50px;
+        margin: 0 auto;
+        padding:0;
+        margin-top: 50px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .sidebar {
+      display: none;
+    }
+    
 }

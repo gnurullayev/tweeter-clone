@@ -1,5 +1,17 @@
 .main {
-  width: 100%;
-  max-width: 600px;
+  width: 600px;
   margin-left: 250px;
+}
+
+@media (max-width: 1230px) { 
+  .main {
+    margin-left: 76px;
+  }
+}
+
+
+@media only screen and (max-width: 500px) {
+  .main {
+    margin-left: 0;
+  }
 }
