@@ -103,7 +103,7 @@ function Sidebar() {
                     <h5 className="account__subtitle">@bobur_mavlonov</h5>
                 </div>
 
-                <button className='account__btn'>
+                <button className='account__btn card__btn'>
                     <img src= {more} alt="" />
                 </button>
             </div>

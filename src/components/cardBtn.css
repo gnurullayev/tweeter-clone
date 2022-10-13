@@ -1,0 +1,138 @@
+.home-card {
+    margin-top: 20px;
+}
+
+.card-list__item {
+    display: flex;
+}
+
+.card__img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.card-list__item {
+    padding: 10px 20px;
+    border-bottom: 1px solid #C4C4C4;
+    transition: all .4s linear;
+}
+
+.card-list__item:hover {
+    background-color: rgba(209, 207, 207, 0.45);
+}
+
+.card-btn-img {
+    width: 25px;
+    height: 25px;
+}
+
+.card__body {
+    width: 100%;
+    max-width: 500px;
+    padding-left: 15px;
+}
+
+.card__body-start {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27px;
+    color: #000000;
+}
+
+.card__title-span {
+    display: inline-block;
+    margin-left: 5px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    opacity: 0.6;
+}
+
+.card__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: all .4s linear;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.card__btn:hover {
+    background-color: rgba(130, 219, 247, 0.3);
+}
+
+.card__btns-list,
+.card__btns-item {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    color: #536471;
+    align-items: center;
+    transition: all .4s linear;
+}
+
+.card__btns-list {
+    margin-top: 10px; 
+    justify-content: space-between;
+}
+
+.card__btns-item {
+    width: max-content;
+    cursor: pointer;
+}
+
+.card__btns-item:nth-child(1):hover,
+.card__btns-item:nth-child(4):hover {
+    color: rgb(7, 186, 218);
+}
+
+.card__btns-item:nth-child(2):hover {
+    color: rgb(41, 236, 15);
+}
+
+.card__btns-item:nth-child(3):hover {
+    color: rgb(255, 0, 157);
+}
+
+.card-btn-img {
+    transition: all.4s linear;
+}
+
+
+.card__btns-item:hover .card__commend-img,
+.card__btns-item:hover .card__share-img {
+    fill: rgba(130, 219, 247, 0.9);
+}
+
+.card__btns-item:hover .card__retweet-img{
+    fill: green;
+}
+
+.card__btns-item:hover .card__heart-img{
+    fill: rgb(255, 0, 157);
+}
+
+.card__commend-number {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 21px;
+}
+
+.card__content-img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    margin-top: 15px;
+    border-radius: 20px;
+}
+

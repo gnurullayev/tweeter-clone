@@ -1,6 +1,14 @@
 import React from 'react';
 import "./home.css"
 import ContentImg from "../../assets/content-btn-img.png"
+import profileImg from "../../assets/sidebar-account-img.png" 
+import image from "../../assets/photo.png"
+import gif from "../../assets/gif.svg"
+import stats from "../../assets/text-setings.svg"
+import smile from "../../assets/stiker.svg"
+import schedule from "../../assets/schedule.svg"
+import CardBtns from '../../components/CardBtns';
+
 
 function Home() {
     return (
@@ -8,16 +16,51 @@ function Home() {
             <div className='home__header header'>
                 <div className="header__content content">
                     <h3 className='content__title'>Home</h3>
-                    <button className='content__btn'>
+                    <button className='content__btn card__btn'>
                         <img src= {ContentImg} alt=""/>
                     </button>
                 </div>
             </div>
 
             <div className="home__body">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas tempore similique in corrupti laborum praesentium hic veniam adipisci error ipsam, perspiciatis fugit nisi maiores ipsa eaque inventore quisquam at expedit
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque fugiat sunt numquam sint veritatis enim assumenda, nihil aut inventore temporibus quae tempore cupiditate pariatur corrupti porro ad iusto hic facere, iste et! Velit corrupti aliquid numquam optio non cupiditate veritatis adipisci vitae perferendis consequuntur exercitationem, cumque fugit? Doloremque officiis aperiam voluptatibus hic odio doloribus nisi ut ea error placeat aut quae sed qui, tempore non maiores. Voluptas quasi, aperiam a ullam aspernatur molestiae dignissimos nulla voluptatem minima magnam possimus! Quisquam voluptates provident praesentium officia rerum iusto voluptatibus maiores error, assumenda nam ea, repellat reiciendis quae voluptas minus aspernatur, vitae necessitatibus.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat non qui consectetur laudantium amet neque ut incidunt unde, iusto, at dolore perspiciatis sapiente! Sit adipisci ipsam quis voluptas qui itaque facere iure praesentium labore ipsum possimus voluptatum obcaecati nobis et molestias, quasi id magni! Accusamus dolorem doloremque rerum pariatur amet consequuntur quod eos enim, vero esse officiis veniam, recusandae voluptate, possimus quibusdam aspernatur sint blanditiis praesentium. Voluptate sed ipsam maxime exercitationem recusandae, illum, cumque iste impedit maiores praesentium ducimus quidem rerum! Natus laborum corrupti nobis porro deleniti sequi dignissimos culpa est beatae? Commodi, odio? Hic harum delectus eveniet culpa fuga ut soluta id qui et necessitatibus aperiam, nulla inventore non sapiente doloremque dolorum! Assumenda nulla libero voluptates possimus cumque, officiis repudiandae deleniti consequuntur saepe quo explicabo officia, id dolorem mollitia quisquam facere? Tenetur, consequatur eos. Sint iure aperiam eos voluptatibus culpa adipisci ipsam officia nostrum, qui porro, beatae distinctio corporis eaque facilis. Odit accusantium quae dolorem a debitis delectus, perspiciatis dignissimos exercitationem distinctio quibusdam magnam error laudantium necessitatibus ad eos obcaecati, suscipit dolor neque! Modi nam quo ab consectetur, tenetur dolores magnam consequuntur totam. Omnis minima porro distinctio at eum fuga, temporibus illo inventore provident eveniet accusantium optio esse cum, reprehenderit ad consequatur cumque ipsa dolor iusto non beatae cupiditate animi praesentium commodi! Inventore hic, in eos numquam officiis ex deleniti dolores aspernatur saepe maiores voluptatibus adipisci tenetur. Adipisci quos ab a recusandae culpa et debitis quidem veniam voluptatibus temporibus, consequatur id iusto iste amet. Saepe eius fugit veniam earum suscipit enim obcaecati laudantium ab? Voluptates, itaque provident ipsum debitis nisi cupiditate, tempore fugiat omnis placeat rem esse consectetur ipsam numquam corrupti cumque! Odio, voluptatum! Quam vel commodi quod maxime rem accusamus beatae amet cumque esse a, expedita sunt pariatur itaque, illum voluptatibus, cum quos tempore vitae voluptas mollitia atque nisi debitis tempora? Sequi dolores voluptates sapiente temporibus ab tempora animi deserunt commodi deleniti delectus error nam voluptas pariatur doloremque dicta repellendus earum, a rem beatae, placeat voluptatibus et? Ducimus inventore, necessitatibus sint in laborum molestias tempore debitis excepturi illo ratione mollitia temporibus placeat saepe corrupti consequuntur perferendis aut laboriosam veritatis, nostrum harum nihil fugit ad sapiente quibusdam? At similique, officiis ab animi consectetur sed sit delectus sunt nesciunt repudiandae officia voluptate est perferendis magni. Iusto, incidunt natus eius, facere quam vel fugit enim dolorum possimus magnam perspiciatis dolore quae laboriosam molestias placeat dicta dignissimos debitis tempora. Amet porro alias eum quo, eius cupiditate tenetur quidem quasi ipsam! Tempore atque molestiae praesentium consequuntur totam veniam in! Placeat voluptatibus repudiandae aperiam obcaecati asperiores. Cumque sint inventore tenetur expedita distinctio excepturi consectetur ipsa consequuntur ducimus alias dolorem beatae laboriosam ullam, perferendis cupiditate est eius, deserunt, vero nam maiores similique? Nam obcaecati et mollitia ipsa qui expedita. Qui cupiditate repellat sapiente explicabo molestiae. Accusamus nam fuga in unde error ut cumque maxime, quod perferendis culpa tenetur nostrum quos provident vel, nisi, optio cum assumenda ipsum quidem odio. Officia, vero? Officiis perferendis ut a eaque deserunt, praesentium labore itaque alias in maxime consectetur rerum ipsam molestias quaerat aut ipsa ab non impedit nesciunt explicabo vitae quisquam! Voluptatem sunt culpa quidem fuga atque numquam dignissimos officiis unde dicta modi nihil, neque assumenda, dolore corrupti. Consequatur maiores veniam, minus itaque mollitia totam doloremque neque laboriosam laudantium ad facilis ratione soluta consequuntur ea. Reiciendis, voluptates quidem voluptas ex facilis natus iste maiores. Ad tempora non modi aliquid quis fugiat, dolores magnam magni commodi ab quasi optio provident! Cupiditate quibusdam quisquam expedita voluptatem, explicabo doloremque porro mollitia animi ullam minima, nulla libero beatae magnam asperiores obcaecati, cumque atque fuga recusandae in voluptatum. Quasi quibusdam modi saepe doloribus corporis incidunt omnis distinctio totam facere fugiat numquam veritatis quas consequatur in, eaque accusamus error vero voluptas minima. Quae ducimus iure a excepturi blanditiis, veritatis dolor necessitatibus eius impedit rem temporibus harum eligendi alias, expedita, animi pariatur ad sequi voluptas accusantium. Quam asperiores nesciunt vel quod, mollitia culpa quae soluta obcaecati blanditiis ea nostrum voluptas maxime voluptatum dolorum provident molestiae maiores voluptates commodi, modi esse dolor dolorem ipsa! Eveniet blanditiis sit necessitatibus dolorem repudiandae unde ab, doloribus incidunt amet sed facere suscipit mollitia optio labore minus hic eum nihil beatae omnis non reprehenderit odio quae! Ut, quibusdam, error expedita eius vel quas aliquid autem, omnis corrupti delectus soluta totam eos est accusantium similique provident mollitia earum in velit libero. Exercitationem, tempore? Aperiam eligendi commodi modi dolorem at quis non iste repellendus, dignissimos, nihil ab? Harum, sint tempora? Ullam ipsam maxime maiores. Commodi est, nobis rem praesentium quae nemo veritatis totam atque! Quidem, consectetur facilis recusandae possimus voluptatem laboriosam expedita tempore. Dolore, ducimus! Quam, ullam. Facilis consequuntur vitae eius eaque dolor reprehenderit consequatur atque tempora ratione magni, enim commodi quo minima voluptas consectetur pariatur odit distinctio, voluptates est sequi itaque suscipit similique? Quaerat totam ut, quibusdam consequatur vero nostrum iusto deserunt cumque officiis, perferendis aliquid facere, ullam aliquam quod veniam. Perspiciatis obcaecati omnis odit consequatur corrupti necessitatibus laboriosam molestiae nisi facilis architecto doloremque quos praesentium libero deleniti at in, laudantium tempora itaque fuga ipsum sint recusandae voluptatibus harum. Soluta, eaque saepe culpa voluptatum sint perferendis facere sapiente perspiciatis blanditiis dolores quia ducimus numquam. Corrupti minima natus fugiat cupiditate totam debitis architecto quod aut, excepturi aliquam error, quam dolorum? Temporibus, ullam deserunt. Enim alias ullam animi iusto. Explicabo nesciunt ipsum sunt cum consectetur beatae corrupti ut saepe, nulla perspiciatis? Aperiam asperiores repellat ratione sint! Dolore, eligendi, perferendis tempore accusantium, veritatis maiores sint dignissimos laborum corrupti aut unde quam tenetur totam ut harum perspiciatis quo dolores explicabo doloremque. Tempora, nisi deserunt perferendis quia sequi voluptatum cum cupiditate repellat vero adipisci dicta sapiente possimus quo ab consequuntur autem nihil enim, soluta consequatur velit quidem facere ducimus. Impedit, doloribus totam quibusdam facere hic necessitatibus unde iste atque optio labore ea pariatur vitae aliquid debitis omnis architecto, ut odit accusantium eligendi voluptates! Esse blanditiis itaque voluptatum ipsam obcaecati optio. Sequi ea officiis doloremque sapiente nostrum obcaecati expedita dolorem illum nam, ipsum fuga minima odit a ut dolorum dicta numquam debitis. Non vero placeat reiciendis recusandae neque praesentium.
+                <div className="home__profile">
+                        <img className='home__profile-img' src= {profileImg} alt="my profile" />
+
+                        <div className="home__profile-content">
+                            <input className='home__prfile-start' type="text" placeholder='What’s happening'/>
+
+                            <div className="home__profile-end">
+                                <ul className="home__profile-emoge emoge-list">
+                                    <li className='emoge-list__item card__btn'>
+                                        <img src= {image} alt= "img" />
+                                    </li>
+
+                                    <li className='emoge-list__item card__btn'>
+                                        <img src= {gif} alt= "gif" />
+                                    </li>
+
+                                    <li className='emoge-list__item card__btn'>
+                                        <img src= {stats} alt= "stats" />
+                                    </li>
+
+                                    <li className='emoge-list__item card__btn'>
+                                        <img src= {smile} alt= "smile" />
+                                    </li>
+
+                                    <li className='emoge-list__item card__btn'>
+                                        <img src= {schedule} alt= "schedule" />
+                                    </li>
+                                </ul>
+
+                                <button className=' btn home__profile-textSubmit'>
+                                    Tweet
+                                </button>
+                            </div>
+                        </div>
+
+                </div>
+
+                <CardBtns/>
             </div>
         </div>
     );

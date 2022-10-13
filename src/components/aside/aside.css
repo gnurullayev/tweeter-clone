@@ -51,8 +51,6 @@
 
 .aside__trends {
     width: 100%;
-    padding: 0 15px;
-    padding-bottom: 30px;
     background: #F7F9F9;
     border-radius: 10px;
 }
@@ -60,8 +58,8 @@
 .trends__header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
+    align-items: center; 
+    padding: 20px 15px;
 }
 
 .trends__header-btn {
@@ -80,7 +78,21 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 15px;
+    padding: 8px 15px;
+}
+
+.trends__item,
+.trends__footer,
+.likes__footer,
+.likes__item {
+    transition: all .4s linear;
+}
+
+.trends__item:hover,
+.trends__footer:hover,
+.likes__footer:hover,
+.likes__item:hover {
+    background-color: rgba(218, 218, 218, 0.5);
 }
 
 .trends__item:last-child {
@@ -109,7 +121,7 @@
 }
 
 .trends__footer {
-    margin-top: 30px;
+    padding: 20px 15px;
 }
 
 .trends__footer-btn,
@@ -121,22 +133,18 @@
 .aside__likes {
     width: 100%;
     margin-top: 15px;
-    padding: 0 15px;
-    padding-top: 20px;
-    padding-bottom: 25px;
     background: #F7F9F9;
     border-radius: 10px;
 }
-
-.likes__body {
-    margin-top: 25px;
+.likes__header {
+    padding: 12px 15px;
 }
 
 .likes__item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 25px;
+    padding: 12px 15px;
     color: #000000;
 }
 
@@ -161,6 +169,10 @@
     text-align: center;
     background: #000000;
     border-radius: 50px;
+}
+
+.likes__footer {
+    padding: 20px 15px;
 }
 
 .aside__end {

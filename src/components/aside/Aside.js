@@ -18,7 +18,7 @@ function Aside() {
                 <div className="aside__trends trends">
                     <div className="trends__header">
                         <p className='trends__header-text'>Trends for you</p>
-                        <button className='trends__header-btn'>
+                        <button className='trends__header-btn card__btn'>
                             <img className='trends__header-img'  src= {asideSetings} alt="setinges" />
                         </button>
                     </div>
@@ -32,7 +32,7 @@ function Aside() {
                                     <p className='trends__item-like'>50.4K Tweets</p>
                                 </div>
 
-                                <button className="trends__setinges">
+                                <button className="trends__setinges card__btn">
                                     <img src= {trendsSettingsImg} alt="" />
                                 </button>
                             </li>
@@ -44,7 +44,7 @@ function Aside() {
                                     <p className='trends__item-like'>50.4K Tweets</p>
                                 </div>
 
-                                <button className="trends__setinges">
+                                <button className="trends__setinges card__btn">
                                     <img src= {trendsSettingsImg} alt="" />
                                 </button>
                             </li>
@@ -56,7 +56,7 @@ function Aside() {
                                     <p className='trends__item-like'>50.4K Tweets</p>
                                 </div>
 
-                                <button className="trends__setinges">
+                                <button className="trends__setinges card__btn">
                                     <img src= {trendsSettingsImg} alt="" />
                                 </button>
                             </li>
