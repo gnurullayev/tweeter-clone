@@ -127,6 +127,10 @@
     fill: rgb(255, 0, 157);
 }
 
+.card__heart-active {
+    fill: rgb(255, 0, 157);
+}
+
 .card__commend-number {
     font-weight: 600;
     font-size: 16px;
