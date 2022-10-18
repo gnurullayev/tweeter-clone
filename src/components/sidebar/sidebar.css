@@ -3,7 +3,7 @@
     width: 100%;
     max-width: 250px;
     height: 100vh;
-    padding-top: 80px;
+    padding-top: 70px;
     padding-bottom: 40px;
     background-image: url("../../assets/sidebar-bg.png");
     background-repeat: no-repeat;
@@ -51,6 +51,7 @@
     max-width: 210px;
     height: 50px;
     transition: all .4s linear;
+    cursor: pointer;
 }
 
 .sitebar__btn:hover {
@@ -58,19 +59,25 @@
 }
 
 .sidebar__account {
+    position: relative;
     display: block;
     max-width: 240px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 8px 10px;
-    margin-top: 30px;
+    margin-top: 50px;
     border-radius: 50px;
     transition: all .4s linear;
+    cursor: pointer;
 }
 
 .sidebar__account:hover{
     background-color: rgba(209, 207, 207, 0.8);
+}
+
+.active:hover {
+    background-color: transparent;
 }
 
 .account__content {

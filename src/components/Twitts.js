@@ -1,15 +1,20 @@
-import React, { useEffect } from 'react';
-import "./cardBtn.css"
+import React from 'react';
+import FollowList from './FollowList';
+import style from "./twitt.module.css"
 import {useSelector,useDispatch} from "react-redux"
+import { liked } from '../redux/actions';
 import cardBtnImg from "../assets/card-btn-img.png"
-import { liked,fetchPosts } from '../redux/actions';
 
-function CardBtns(props) {
-    const {posts} = useSelector(state => state.postReducer)
+
+function Twitts() {
+    
+    const {personalPosts} = useSelector(state => state.postReducer)
     const dispatch = useDispatch()
 
+    console.log(personalPosts);
+
     const likeHandler = (id) => {
-        const newPosts = posts.map(post => {
+        const newPosts = personalPosts.map(post => {
             if(post.id === id) {
                 return {...post, like: !post.like, likeNum: !post.like ? post.likeNum + 1 : post.likeNum - 1,}
             }
@@ -21,22 +26,15 @@ function CardBtns(props) {
         dispatch(liked(newPosts))
     }
 
-    useEffect(() => {
-        fetch("https://reqres.in/api/users")
-        .then(res => res.json())
-        .then(data => {
-            // console.log(data.data);
-            dispatch(fetchPosts(data.data))
-        })
-        
-    },[])
-    console.log(posts);
-    
-
     return (
-        <ul className="home-card card-list">
-            {
-                posts.map(post => (
+        <div className= {style.twitts}>
+
+             {
+                personalPosts.length === 0 
+                ?
+                <h4 style={{padding: "0 15px",color: "#000"}}>Twittlar mavjud emas</h4>
+                :
+                personalPosts.map(post => (
                     <li key= {post.title} className='card-list__item card'>
                         <img className='card__img' src = {post.avatar} alt="" />
                         
@@ -115,9 +113,11 @@ function CardBtns(props) {
                         </div>
                     </li>
                 ))
-            }
-        </ul>
+             }
+            
+            <FollowList/>   
+        </div>
     );
 }
 
-export default CardBtns;
+export default Twitts;

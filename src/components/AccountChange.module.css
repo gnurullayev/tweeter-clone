@@ -1,0 +1,36 @@
+.content {
+    position: absolute;
+    z-index: 1;
+    top: -140px;
+    left: -30px;
+    width: 300px;
+    padding: 10px 0;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.content::after {
+    position: absolute;
+    left: 130px;
+    transform: rotate(45deg);
+    bottom: -5px;
+    z-index: -1;
+    width: 20px ;
+    height: 20px;
+    background-color: #fff;
+    content: "";
+}
+
+.list {
+    border-top: 0.5px solid rgba(153, 153, 153, 0.5);
+}
+
+.item {
+    padding: 14px 15px;
+    transition: all .4s linear;
+}
+
+.item:hover {
+    background-color: rgba(223, 223, 223, 0.5);
+} 

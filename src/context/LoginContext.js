@@ -7,10 +7,7 @@ function LoginContext({children}) {
     const [isLogin, setLogin] = useState(localStorage.getItem("token") || "")
 
     useEffect(() => {
-        if(isLogin) {
-            localStorage.setItem("token", isLogin)
-        }
-        console.log(isLogin);
+        localStorage.setItem("token", isLogin)
      }, [isLogin])
     return (
         <LoginCreatContext.Provider value={{isLogin, setLogin}}>

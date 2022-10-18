@@ -1,6 +1,6 @@
 import React from 'react';
 import "./home.css"
-import ContentImg from "../../assets/content-btn-img.png"
+
 import profileImg from "../../assets/sidebar-account-img.png" 
 import image from "../../assets/photo.png"
 import gif from "../../assets/gif.svg"
@@ -8,19 +8,13 @@ import stats from "../../assets/text-setings.svg"
 import smile from "../../assets/stiker.svg"
 import schedule from "../../assets/schedule.svg"
 import CardBtns from '../../components/CardBtns';
+import Header from '../../components/header/Header';
 
 
 function Home() {
     return (
         <div className='home'>
-            <div className='home__header header'>
-                <div className="header__content">
-                    <h3 className='header__conten-title'>Home</h3>
-                    <button className='header__content-btn card__btn'>
-                        <img src= {ContentImg} alt=""/>
-                    </button>
-                </div>
-            </div>
+            <Header title = "Home"/>
 
             <div className="home__body">
                 <div className="home__profile">

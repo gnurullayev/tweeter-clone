@@ -70,7 +70,7 @@ function Aside() {
 
                 <div className="aside__likes likes">
                     <div className="likes__header">
-                        <p className='likes__header-text'>Trends for you</p>
+                        <p className='likes__header-text'>You might like</p>
                     </div>
 
                     <div className="likes__body">
@@ -92,8 +92,8 @@ function Aside() {
                                 <img className='likes__img' src={avatar2} alt="profile" />
 
                                 <div className="likes__content">
-                                    <h3 className="likes__title">Mushtariy</h3>
-                                    <h5 className="likes__subtitle">@Mushtar565266</h5>
+                                    <h3 className="likes__title">Shuhratbek</h3>
+                                    <h5 className="likes__subtitle">@mrshukhrat</h5>
                                 </div>
 
                                 <button className='likes__btn'>
