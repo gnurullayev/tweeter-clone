@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useEffect,memo } from 'react';
 import "./cardBtn.css"
 import {useSelector,useDispatch} from "react-redux"
 import cardBtnImg from "../assets/card-btn-img.png"
 import { liked,fetchPosts } from '../redux/actions';
 
-function CardBtns(props) {
+function CardBtns() {
     const {posts} = useSelector(state => state.postReducer)
     const dispatch = useDispatch()
 
@@ -16,8 +16,7 @@ function CardBtns(props) {
 
             return post
         })
-
-
+        
         dispatch(liked(newPosts))
     }
 
@@ -25,19 +24,19 @@ function CardBtns(props) {
         fetch("https://reqres.in/api/users")
         .then(res => res.json())
         .then(data => {
-            // console.log(data.data);
             dispatch(fetchPosts(data.data))
+        })
+        .catch((e) => {
+            console.log(e.message);
         })
         
     },[])
-    console.log(posts);
     
-
     return (
         <ul className="home-card card-list">
             {
                 posts.map(post => (
-                    <li key= {post.title} className='card-list__item card'>
+                    <li key= {post.id} className='card-list__item card'>
                         <img className='card__img' src = {post.avatar} alt="" />
                         
                         <div className="card__body">
@@ -108,9 +107,23 @@ function CardBtns(props) {
                                     <button className='card__share card__btn'>
                                         <svg viewBox="0 0 24 24" aria-hidden="true" className="card__share-img card-btn-img"><g><path d="M17.53 7.47l-5-5c-.293-.293-.768-.293-1.06 0l-5 5c-.294.293-.294.768 0 1.06s.767.294 1.06 0l3.72-3.72V15c0 .414.336.75.75.75s.75-.336.75-.75V4.81l3.72 3.72c.146.147.338.22.53.22s.384-.072.53-.22c.293-.293.293-.767 0-1.06z"></path><path d="M19.708 21.944H4.292C3.028 21.944 2 20.916 2 19.652V14c0-.414.336-.75.75-.75s.75.336.75.75v5.652c0 .437.355.792.792.792h15.416c.437 0 .792-.355.792-.792V14c0-.414.336-.75.75-.75s.75.336.75.75v5.652c0 1.264-1.028 2.292-2.292 2.292z"></path></g></svg>
                                     </button>
-                                    
-                                    <span className='card__commend-number'>{post.shareNum}</span>
                                 </li>
+
+                               {
+                                post.post 
+                                ?
+                                (
+                                    <li className="card__btns-item">
+                                        <button className='card__share card__btn'>
+                                            <svg viewBox="0 0 24 24" aria-hidden="true" className="card__statistics-img card-btn-img"><g><path d="M12 22c-.414 0-.75-.336-.75-.75V2.75c0-.414.336-.75.75-.75s.75.336.75.75v18.5c0 .414-.336.75-.75.75zm5.14 0c-.415 0-.75-.336-.75-.75V7.89c0-.415.335-.75.75-.75s.75.335.75.75v13.36c0 .414-.337.75-.75.75zM6.86 22c-.413 0-.75-.336-.75-.75V10.973c0-.414.337-.75.75-.75s.75.336.75.75V21.25c0 .414-.335.75-.75.75z"></path></g></svg>
+                                        </button>
+                                    </li>
+                                )
+                                :
+                                null
+                               } 
+
+                                
                             </ul>
                         </div>
                     </li>
@@ -120,4 +133,4 @@ function CardBtns(props) {
     );
 }
 
-export default CardBtns;
+export default memo(CardBtns);

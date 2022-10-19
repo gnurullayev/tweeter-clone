@@ -8,14 +8,9 @@ import icon3 from "../../assets/birthday-icon.svg"
 import icon4 from "../../assets/calendar.svg"
 import { Link, Outlet, useLocation} from "react-router-dom";
 
-import {useDispatch} from "react-redux"
-import { personalPosts } from '../../redux/actions';
-
 
 function Profile() {
     const {pathname} = useLocation()
-
-    const dispatch = useDispatch()
 
     return (
         <div className= "profile">
@@ -78,7 +73,7 @@ function Profile() {
             </div>
 
             <ul className="profile__midle-list">
-                <li className="profile__midle-item" onClick={() => dispatch(personalPosts())}>
+                <li className="profile__midle-item">
                     <Link 
                     to="/profile" 
                     className= {`profile__midle-link ${pathname === "/profile" && "extra-active"}`}

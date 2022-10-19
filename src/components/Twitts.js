@@ -2,30 +2,25 @@ import React from 'react';
 import FollowList from './FollowList';
 import style from "./twitt.module.css"
 import {useSelector,useDispatch} from "react-redux"
-import { liked } from '../redux/actions';
+import {liked } from '../redux/actions';
 import cardBtnImg from "../assets/card-btn-img.png"
 
 
 function Twitts() {
     
-    const {personalPosts} = useSelector(state => state.postReducer)
+    const {personalPosts,posts} = useSelector(state => state.postReducer)
     const dispatch = useDispatch()
 
-    console.log(personalPosts);
-
     const likeHandler = (id) => {
-        const newPosts = personalPosts.map(post => {
+        const newPosts = posts.map(post => {
             if(post.id === id) {
                 return {...post, like: !post.like, likeNum: !post.like ? post.likeNum + 1 : post.likeNum - 1,}
             }
 
             return post
         })
-
-
         dispatch(liked(newPosts))
     }
-
     return (
         <div className= {style.twitts}>
 
@@ -35,7 +30,7 @@ function Twitts() {
                 <h4 style={{padding: "0 15px",color: "#000"}}>Twittlar mavjud emas</h4>
                 :
                 personalPosts.map(post => (
-                    <li key= {post.title} className='card-list__item card'>
+                    <li key = {post.id} className='card-list__item card'>
                         <img className='card__img' src = {post.avatar} alt="" />
                         
                         <div className="card__body">

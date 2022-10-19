@@ -7,25 +7,19 @@ import { Link, useLocation } from 'react-router-dom';
 import AccountChange from '../AccountChange';
 
 import {useDispatch} from "react-redux"
-import { personalPosts } from '../../redux/actions';
+import { PersonalPosts } from '../../redux/actions';
 
 
 function Sidebar() {
     const [visble,setVisible] = useState(false)
     const {pathname} = useLocation()
 
+    const dispatch = useDispatch()
+
     const visibleHandler = (e) => {
         setVisible(true)
         e.stopPropagation()
     }
-
-    useEffect(() => {
-        dispatch(personalPosts())
-    }, [])
-
-    const dispatch = useDispatch()
-
-
 
     return (
         <div className='sidebar'>
@@ -89,7 +83,7 @@ function Sidebar() {
                     </Link>
                 </li>
 
-                <li className="sidebar__item" onClick={() => dispatch(personalPosts())}>
+                <li className="sidebar__item" onClick={() => dispatch(PersonalPosts())}>
                     <Link 
                     to="/profile" 
                     className="sidebar__link"

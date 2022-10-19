@@ -1,5 +1,5 @@
 
-import { FILTER_TRENDS,FETCH_POSTS,ADD_POST,ADD_MEDIA,FILTER_LIKES, LIKED,PERSONAL_POSTS} from "../types";
+import {FETCH_POSTS,ADD_POST,ADD_MEDIA,FILTER_LIKES, LIKED,PERSONAL_POSTS} from "../types";
 import cardImg1 from "../../assets/card-img.png"
 import cardImg2  from "../../assets/card-img2.png"
 import cardImg3  from "../../assets/card-img3.png"
@@ -105,8 +105,8 @@ const initialPersonalPosts = [
 ]
 
 const initialState1 = {
-    posts : initialPosts,
-    personalPosts: [],
+    posts : [...initialPosts, ...initialPersonalPosts],
+    personalPosts: initialPersonalPosts,
     likes: [],
     media:[],
     trends:[],
@@ -116,44 +116,43 @@ const initialState1 = {
 export const postReducer = (state = initialState1, {type,payload}) => {
     switch (type) {
         case FETCH_POSTS: 
-        const newPosts = payload.map(post => {
-            return {
-                ...post,
-                post: false,
-                timeText: "@cloutexhibition · 1h",
-                body: "Обетда..... ",
-                body2: "Кечиринглар",
-                contentImg: null,
-                like: false,
-                commendNum: 56,
-                likeNum: 100,
-                retweetNum: 82,
-                shareNum: 40,
-            }
-        })
+            const newPosts = payload.map(post => {
+                return {
+                    ...post,
+                    post: false,
+                    timeText: "@cloutexhibition · 1h",
+                    body: "Обетда..... ",
+                    body2: "Кечиринглар",
+                    contentImg: null,
+                    like: false,
+                    commendNum: 56,
+                    likeNum: 100,
+                    retweetNum: 82,
+                    shareNum: 40,
+                }
+            })
             return {
                 ...state,
+                personalPosts: payload.filter(post => post.post),
                 posts: [...initialPosts,...initialPersonalPosts, ...newPosts]
             }
         case LIKED:
-            
             return {
                 ...state,
                 posts: payload,
+                personalPosts: payload.filter(post => post.post)
             } 
         case PERSONAL_POSTS:
-            const newPosts2 = state.posts.filter(post => post.post)
-
-            console.log(state.posts);
             return {
                 ...state,
-                personalPosts: newPosts2
+                personalPosts: state.posts.filter(post => post.post)
             }      
         case ADD_POST:
             state.posts.unshift(payload)
             return {
                 ...state,
-                posts: state.posts
+                posts: state.posts,
+                personalPosts: state.posts.filter(post => post.post)
             }
         case ADD_MEDIA:
             return {
