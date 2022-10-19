@@ -139,6 +139,7 @@ export const postReducer = (state = initialState1, {type,payload}) => {
         case LIKED:
             return {
                 ...state,
+                likes: payload.filter(post => post.like),
                 posts: payload,
                 personalPosts: payload.filter(post => post.post)
             } 

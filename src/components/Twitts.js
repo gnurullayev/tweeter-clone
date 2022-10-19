@@ -21,6 +21,7 @@ function Twitts() {
         })
         dispatch(liked(newPosts))
     }
+    
     return (
         <div className= {style.twitts}>
 
